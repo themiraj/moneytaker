@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './styles/output.css'
 import Login from './users/login';
+import { Provider } from 'react-redux'
 import {
   BrowserRouter as Router,
   Switch,
@@ -49,7 +50,9 @@ function App() {
               <Users />
             </Route>
             <Route path="/">
+            <Provider store={store}>
               <Home />
+            </Provider>,
             </Route>
           </Switch>
         </div>
